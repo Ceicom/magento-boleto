@@ -4,4 +4,4 @@ magento-boleto
 
 ## Colaboradores
 
-[@CBJonatanSantos][https://twitter.com/CBJonatanSantos]
+[@CBJonatanSantos](https://twitter.com/CBJonatanSantos)
