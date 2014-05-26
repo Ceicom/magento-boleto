@@ -1,7 +1,0 @@
-<p>
-    <?php echo $this->getMethod()->getTitle() ?><br />
-    <?php if ($this->getOrder()) { ?>
-        <button style="margin-right: 20px;" onclick="window.open('<?php echo $this->getAdminUrl(); ?>', 'capture_popup','toolbar=0,location=0,directories=0,status=1,menubar=0,scrollbars=1,resizable=0,screenX=0,screenY=0,left=0,top=0,width=765,height=580')">Exibir 2ª via</button>
-        <button onclick="window.open('<?php echo Mage::getUrl("boleto/checkout/sendmail/order_id/" . $this->getOrder()->getId()) ?>', 'capture_popup','toolbar=0,location=0,directories=0,status=1,menubar=0,scrollbars=1,resizable=0,screenX=0,screenY=0,left=0,top=0,width=765,height=440')">Enviar 2ª via ao cliente por e-mail</button>
-    <?php } ?>
-</p>
