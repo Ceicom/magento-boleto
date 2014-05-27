@@ -40,6 +40,10 @@ class Ceicom_Boleto_CustomerController extends Mage_Core_Controller_Front_Action
 
                 try{
                     $response = $client->request();
+                    error_reporting(E_ALL); 
+                    ini_set("display_errors", 1);
+                    echo("<pre>");
+                    die(print_r(utf8_encode($response->getBody())));
                     if ($response->isSuccessful()) {
                         echo $response->getBody();
                     }
