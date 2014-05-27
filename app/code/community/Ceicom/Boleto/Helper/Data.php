@@ -76,14 +76,10 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getSingleton('boleto/standard');
     }
 
-    public function getBoletoRoute($type)
+    public function getBoletoRoute()
     {
         $home_url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); // Somente uma Loja.
-        if($type =='success'){
-            return $home_url .'boleto/print/success';
-        }else{
-            return $home_url .'boleto/print/gerar';
-        }
+        return $home_url .'boleto/print/gerar';
     }
 
     /**
