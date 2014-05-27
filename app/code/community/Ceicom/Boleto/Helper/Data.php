@@ -240,9 +240,6 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
         if($sesId){
             $session = Mage::getSingleton('core/resource_session')->read($sesId);
         }
-        echo('<pre>');
-        print_r($session);
-        die();
         $loggedIn = false;
         if($session)
         {
