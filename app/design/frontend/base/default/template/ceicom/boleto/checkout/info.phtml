@@ -2,7 +2,6 @@
 $standard=Mage::getModel('boleto/standard');
 $order_id=$this->getRequest()->getParam('order_id');
 ?>
-<?php echo Mage::app()->getRequest()->getControllerName(); ?>
 <?php echo $this->getMethod()->getTitle(); ?>
 <br/>
 <?php if(Mage::app()->getRequest()->getControllerName() == 'order' || Mage::helper('boleto')->getStandard()->getConfigData('secancelado')): ?>
