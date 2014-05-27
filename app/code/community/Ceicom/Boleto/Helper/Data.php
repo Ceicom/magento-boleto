@@ -126,7 +126,6 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     public function getTemplateBoletoUrl() {
-        die($GLOBALS['paths'][3] . "/boleto_php/boleto_" . $this->getConfig(self::XML_PATH_BOLETO_BANCO) . ".php");
         return $GLOBALS['paths'][3] . "/boleto_php/boleto_" . $this->getConfig(self::XML_PATH_BOLETO_BANCO) . ".php";
     }
 
@@ -241,9 +240,6 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
         if($sesId){
             $session = Mage::getSingleton('core/resource_session')->read($sesId);
         }
-        echo('<pre>');
-        print_r($session);
-        die();
         $loggedIn = false;
         if($session)
         {
