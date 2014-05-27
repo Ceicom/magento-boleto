@@ -18,7 +18,6 @@ class Ceicom_Boleto_CustomerController extends Mage_Core_Controller_Front_Action
 
             if(Mage::helper('boleto')->getStandard()->getConfigData('secancelado') ||
                 (mage::Helper('boleto')->getOrder($order_id)->getStatus() != 'canceled')){
-                die(Mage::helper('boleto')->getBoletoRoute());
                 $form = new Varien_Data_Form();
                 $form->setAction(Mage::helper('boleto')->getBoletoRoute())
                     ->setId('BoletoBancario_standard_view')
