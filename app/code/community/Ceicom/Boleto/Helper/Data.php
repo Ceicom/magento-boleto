@@ -126,6 +126,7 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     public function getTemplateBoletoUrl() {
+        die($GLOBALS['paths'][3] . "/boleto_php/boleto_" . $this->getConfig(self::XML_PATH_BOLETO_BANCO) . ".php");
         return $GLOBALS['paths'][3] . "/boleto_php/boleto_" . $this->getConfig(self::XML_PATH_BOLETO_BANCO) . ".php";
     }
 

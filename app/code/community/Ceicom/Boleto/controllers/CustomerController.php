@@ -13,7 +13,6 @@ class Ceicom_Boleto_CustomerController extends Mage_Core_Controller_Front_Action
     }
     public function viewAction()
     {
-        die("PATH: ".$GLOBALS['paths'][3]);
         if (mage::Helper('boleto')->_loadValidOrder()) {
             $order_id = $this->getRequest()->getParam('order_id');
 
