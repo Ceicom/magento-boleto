@@ -32,7 +32,8 @@ class Ceicom_Boleto_CustomerController extends Mage_Core_Controller_Front_Action
                 $numberofElemets = $elements->count();
 
                 $client = new Varien_Http_Client($form->getData('action'));
-                $client->setMethod(Varien_Http_Client::POST);
+                $client->setMethod(Varien_Http_Client::POST)
+                    ->setHeaders('Accept-Charset','utf-8');
 
                 for ($i=0; $i < $numberofElemets; $i++) {
                     $client->setParameterPost($elements[$i]->getData('name'), $elements[$i]->getData('value'));
