@@ -56,4 +56,12 @@ class Ceicom_Boleto_AdminController extends Mage_Core_Controller_Front_Action
         require_once Mage::helper('boleto')->getTemplateBoletoUrl();
         exit();
     }
+
+    public function sendmailAction()
+    {
+        $order_id = $this->getRequest()->getParam('order_id');
+        mage::Helper('boleto')->sendNotificationEmail($order_id);
+        $blocoRetorno = $this->getLayout()->createBlock('core/template')->setTemplate('ceicom/boleto/email/popup.phtml');
+        $this->getResponse()->setBody($blocoRetorno->toHtml());
+    }
 }
