@@ -256,4 +256,81 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
         Mage::getSingleton('core/session', array('name'=>'frontend'));
         return Mage::getSingleton('customer/session')->isLoggedIn();
     }
+
+    public function sendNotificationEmail($order_id)
+    {
+        /**
+          * Caminho do template do e-mail
+          */
+        $templateConfigPath = self::XML_PATH_BOLETO_TEMPLATE_EMAIL_SEGUNDA_VIA;
+        /**
+         * Recupera o pedido
+         */
+        $order              = $this->getOrder($order_id);
+        /**
+         * Define o destinatário: e-mail do cliente
+         */
+        $to                 = $order->getCustomerEmail();
+        /**
+         * Define o destinatário: nome do cliente
+         */
+        $toName             = $order->getCustomerName();
+        /**
+         * Retorna o cliente para ser passado como variável para o template
+         * @var [type]
+         */
+        $customer = Mage::getModel('customer/customer')->load($order->getCustomerId());
+
+        $translate = Mage::getSingleton('core/translate');
+        $translate->setTranslateInline(false);
+
+        /**
+         * Instancia o model de template de e-mail
+         */
+        $mailTemplate = Mage::getModel('core/email_template');
+        /**
+         * Pega o ID do template de e-mail, filtrando pela loja que o pedido está relacionado
+         */
+        $template = Mage::getStoreConfig($templateConfigPath, Mage::app()->getStore()->getId());
+        /**
+         * Define as configurações de design do template
+         */
+        $mailTemplate->setDesignConfig(array('area'=>'frontend', 'store'=>Mage::app()->getStore()->getId()))
+                    /**
+                     * Envia o e-mail
+                     * Definição da função de envio
+                     *
+                     * @param   int $templateId Id do Template
+                     * @param   string|array $sender Informações do remetente
+                     * @param   string $email E-mail do Destinatário
+                     * @param   string $name Nome do Destinatário
+                     * @param   array $vars Variáveis que podem ser utilizadas no template
+                     * @param   int|null $storeId Id da Loja
+                     * @return  Mage_Core_Model_Email_Template
+                     */
+                     ->sendTransactional(
+                                $template,
+                                Mage::getStoreConfig(Mage_Sales_Model_Order::XML_PATH_EMAIL_IDENTITY,Mage::app()->getStore()->getId()),
+                                $to,
+                                $toName,
+                                /**
+                                 * NESSE PONTO DEFINIMOS AS VARIÁVEIS PASSADAS PARA O TEMPLATE
+                                 */
+                                array(
+                                        /**
+                                         * Envia a váriavel com o link do boleto
+                                         */
+                                        'boleto_link'  => Mage::getUrl("boleto/customer/view/order_id/$order_id"),
+                                        /**
+                                         * Envia o objeto do cliente para que seja possível retornar os atributos do cliente no template
+                                         */
+                                        'customer'     => $customer,
+                                        /**
+                                         * Envia o objeto do pedido para que seja possível retornar os atributos do pedido no template
+                                         */
+                                        'order'        => $order
+                                )
+                     );
+        $translate->setTranslateInline(true);
+    }
 }

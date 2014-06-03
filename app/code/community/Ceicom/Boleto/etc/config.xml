@@ -24,6 +24,15 @@
         </layout>
     </frontend>
     <global>
+        <template>
+            <email>
+                <boleto_bancario_email_segunda_via module="boleto">
+                    <label>Ceicom Boleto - envio de 2ª via por email</label>
+                    <file>boleto_email_template.html</file>
+                    <type>html</type>
+                </boleto_bancario_email_segunda_via>
+            </email>
+        </template>
         <models>
             <boleto>
                 <class>Ceicom_Boleto_Model</class>

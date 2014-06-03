@@ -17,12 +17,19 @@ class Ceicom_Boleto_Block_Frontend_Checkout_Info extends Mage_Payment_Block_Info
         return Mage::registry('current_order');
     }
 
-    function getAdminUrl(){
+    public function getAdminUrl(){
         return Mage::getUrl('boleto/admin/view', array(
             'order_id' => $this->getOrder()->getId(),
             'key' => Mage::getSingleton("admin/session")->getEncryptedSessionId(),
             '_current' => true,
         ));
-        //return Mage::getUrl("BoletoBancario/standard/viewadmin/order_id/" . $this->getOrder()->getId()."key/". Mage::getSingleton("admin/session")->getSessionId());
+    }
+
+    public function getSendMailUrl(){
+        return Mage::getUrl('boleto/admin/sendmail', array(
+            'order_id' => $this->getOrder()->getId(),
+            'key' => Mage::getSingleton("admin/session")->getEncryptedSessionId(),
+            '_current' => true,
+        ));
     }
 }
