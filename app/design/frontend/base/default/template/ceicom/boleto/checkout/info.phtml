@@ -1,10 +1,15 @@
-<?php /** INCIO GERAR BOLETO SE BOLETO */
+<?php
+
 $standard=Mage::getModel('boleto/standard');
 $order_id=$this->getRequest()->getParam('order_id');
+$order = Mage::getModel('sales/order')->load($order_id);
+$statusorder = $order->getStatus();
+$cancelOrderStatus = explode(',', Mage::helper('boleto')->getStandard()->getConfigData('secancelado'));
+echo $this->getMethod()->getTitle(); 
+
 ?>
-<?php echo $this->getMethod()->getTitle(); ?>
 <br/>
-<?php if(Mage::app()->getRequest()->getControllerName() == 'order' || Mage::helper('boleto')->getStandard()->getConfigData('secancelado')): ?>
+<?php if(Mage::app()->getRequest()->getControllerName() == 'order' && in_array($statusorder, $cancelOrderStatus) == false ): ?>
     <center>
         <button type="button" class="button" onclick="window.open('<?php echo $this->getUrl('boleto/customer/view/order_id/' . $order_id) ?>')"><span><span><?php echo $this->__('Clique aqui para imprimir o Boleto') ?></span></span><img src="<?php echo($this->getSkinUrl('images/boleto/boleto.gif')) ?>" /></button><br />
     </center>
