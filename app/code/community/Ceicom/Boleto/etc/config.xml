@@ -66,7 +66,7 @@
                 <model>boleto/standard</model>
                 <active>1</active>
                 <order_status>pending</order_status>
-                <title>Ceicom Boleto Bancário</title>
+                <title>Boleto Bancário</title>
                 <payment_action>sale</payment_action>
                 <allowspecific>1</allowspecific>
                 <custom_text>Após a confirmação do pedido, você será redirecionado para impressão do Boleto Bancário.</custom_text>
