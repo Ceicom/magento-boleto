@@ -5,6 +5,7 @@
             <version>0.1.5</version>
         </Ceicom_Boleto>
     </modules>
+    
     <frontend>
         <routers>
             <boleto>
