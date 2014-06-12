@@ -169,14 +169,14 @@
                             <comment>Quarta linha de instruções.</comment>
                         </instrucoes4>
                         <secancelado translate="label">
-                            <label>Mostar 2ª Via Se:</label>
+                            <label>Não mostar 2ª Via Se:</label>
                             <frontend_type>multiselect</frontend_type>
                             <sort_order>17</sort_order>
                             <source_model>Ceicom_Boleto_Model_Source_OrderStatus</source_model>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>Deseja que o cliente veja a segunda via caso o pedido sejá:<![CDATA[
+                            <comment>Deseja que o cliente não veja a segunda via caso o pedido sejá:<![CDATA[
 						<br />
 						<br />
 						<div class="divider"></div>
