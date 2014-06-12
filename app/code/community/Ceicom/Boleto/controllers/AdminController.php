@@ -40,7 +40,21 @@ class Ceicom_Boleto_AdminController extends Mage_Core_Controller_Front_Action
             try{
                 $response = $client->request();
                 if ($response->isSuccessful()) {
-                    echo $response->getBody();
+                    // Decode any content-encoding (gzip or deflate) if needed
+                    switch (strtolower($response->getHeader('content-encoding'))) {
+                            case 'gzip':
+                                     // Handle gzip encoding
+                                    echo Zend_Http_Response::decodeGzip($response->getRawBody());
+                                    break;
+                            case 'deflate':
+                                    // Handle deflate encoding
+                                    echo Zend_Http_Response::decodeDeflate($response->getRawBody());
+                                    break;
+                            default:
+                                    echo $response->getHeader();
+                                    break;
+                    }
+                    die();
                 }
             } catch (Exception $e) {
                 Mage::getSingleton('core/session')->addError('Error'. $e);
