@@ -148,12 +148,12 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
     public function getAllConfigData($order_id)
     {
         $moduleName = 'Ceicom_CustomerAccount';
+        $order = $this->getOrder($order_id);
         if(Mage::getConfig()->getModuleConfig($moduleName)->is('active', 'true')) {
             $clienteEnd = "{$a->getStreet(1)} {$a->getStreet(2)}";
         }else{
             $clienteEnd = $a->getStreet(1);
         }
-        $order = $this->getOrder($order_id);
         $a = $order->getBillingAddress();
         $sArr = array(
             'base_url'			=> $this->getLibBoletoUrl(),
