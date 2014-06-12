@@ -53,7 +53,7 @@ class Ceicom_Boleto_PrintController extends Mage_Core_Controller_Front_Action
                                     echo Zend_Http_Response::decodeDeflate($response->getRawBody());
                                     break;
                             default:
-                                    echo $response->getHeader();
+                                    echo $response->getBody();
                                     break;
                     }
                     die();
