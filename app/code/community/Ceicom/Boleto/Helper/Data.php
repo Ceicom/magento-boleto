@@ -147,6 +147,12 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function getAllConfigData($order_id)
     {
+        $moduleName = 'Ceicom_CustomerAccount';
+        if(Mage::getConfig()->getModuleConfig($moduleName)->is('active', 'true')) {
+            $clienteEnd = "{$a->getStreet(1)} {$a->getStreet(2)}";
+        }else{
+            $clienteEnd = $a->getStreet(1);
+        }
         $order = $this->getOrder($order_id);
         $a = $order->getBillingAddress();
         $sArr = array(
@@ -156,7 +162,7 @@ class Ceicom_Boleto_Helper_Data extends Mage_Core_Helper_Abstract
             'ref_transacao'     => $order->getRealOrderId(),
             'cliente_nome'      => $a->getFirstname().' '.$a->getLastname(),
             'cliente_cep'       => $a->getPostcode(),
-            'cliente_end'       => $a->getStreet(1),
+            'cliente_end'       => $clienteEnd,
             'cliente_num'       => "?",
             'cliente_compl'     =>  $a->getStreet(2),
             'cliente_bairro'    => "?",
