@@ -42,22 +42,22 @@ class Ceicom_Boleto_CustomerController extends Mage_Core_Controller_Front_Action
                 try{
                     $response = $client->request();
                     if ($response->isSuccessful()) {
-                    // Decode any content-encoding (gzip or deflate) if needed
-                    switch (strtolower($response->getHeader('content-encoding'))) {
-                            case 'gzip':
-                                     // Handle gzip encoding
-                                    echo Zend_Http_Response::decodeGzip($response->getRawBody());
-                                    break;
-                            case 'deflate':
-                                    // Handle deflate encoding
-                                    echo Zend_Http_Response::decodeDeflate($response->getRawBody());
-                                    break;
-                            default:
-                                    echo $response->getBody();
-                                    break;
+                        // Decode any content-encoding (gzip or deflate) if needed
+                        switch (strtolower($response->getHeader('content-encoding'))) {
+                                case 'gzip':
+                                         // Handle gzip encoding
+                                        echo Zend_Http_Response::decodeGzip($response->getRawBody());
+                                        break;
+                                case 'deflate':
+                                        // Handle deflate encoding
+                                        echo Zend_Http_Response::decodeDeflate($response->getRawBody());
+                                        break;
+                                default:
+                                        echo $response->getBody();
+                                        break;
+                        }
+                        die();
                     }
-                    die();
-                }
                 } catch (Exception $e) {
                     Mage::getSingleton('core/session')->addError('Error'. $e);
                 }
