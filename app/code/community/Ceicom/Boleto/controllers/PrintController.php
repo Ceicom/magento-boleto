@@ -56,7 +56,6 @@ class Ceicom_Boleto_PrintController extends Mage_Core_Controller_Front_Action
                                         echo $response->getBody();
                                         break;
                         }
-                        die();
                     }
                 } catch (Exception $e) {
                     Mage::getSingleton('core/session')->addError('Error'. $e);

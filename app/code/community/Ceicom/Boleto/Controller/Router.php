@@ -49,7 +49,6 @@ class Ceicom_Boleto_Controller_Router extends Mage_Core_Controller_Varien_Router
             }else if((isset($route['action']))&&($route['action'] == 'view')){
                 $action = 'view';
             }
-            die("$controller/$action");
             $request->setModuleName('boleto')
                 ->setControllerName($controller)
                 ->setActionName($action);
