@@ -14,7 +14,7 @@ class Ceicom_Boleto_Model_Source_OrderStatus
     public function toOptionArray()
     {
         $orderStatus = Mage::getModel('sales/order_status')->getResourceCollection()->getData();
-        $returnvalue = [];
+
         for ($i=0; $i < count($orderStatus); $i++) {
             $returnvalue[$i]['value'] = $orderStatus[$i]['status'];
             $returnvalue[$i]['label'] = $orderStatus[$i]['label'];
