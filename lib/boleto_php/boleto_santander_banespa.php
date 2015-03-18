@@ -51,6 +51,7 @@ $valor_cobrado = $_POST["total_pedido"]; // Valor - REGRA: Sem pontos na milhar 
 $valor_cobrado = str_replace(",", ".",$valor_cobrado);
 $valor_boleto=number_format($valor_cobrado+$taxa_boleto, 2, ',', '');
 
+$dadosboleto["logo_url"] = $_POST["logo_url"]; // Caminho da Logomarca
 $dadosboleto["nosso_numero"] = $_POST["ref_transacao"];  // Nosso numero sem o DV - REGRA: Máximo de 7 caracteres!
 $dadosboleto["numero_documento"] = $_POST["ref_transacao"];	// Num do pedido ou nosso numero
 $dadosboleto["data_vencimento"] = $data_venc; // Data de Vencimento do Boleto - REGRA: Formato DD/MM/AAAA
