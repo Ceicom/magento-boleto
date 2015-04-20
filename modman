@@ -1,0 +1,10 @@
+app/code/community/Ceicom/Boleto app/code/community/Ceicom/Boleto
+app/design/adminhtml/default/default/template/ceicom/boleto/checkout/* app/design/adminhtml/default/default/template/ceicom/boleto/checkout/
+app/design/frontend/base/default/layout/ceicom/* app/design/frontend/base/default/layout/ceicom/
+app/design/frontend/base/default/template/ceicom/boleto/* app/design/frontend/base/default/template/ceicom/boleto/
+app/etc/modules/* app/etc/modules/
+app/locale/en_US/template/email/* app/locale/en_US/template/email/
+app/locale/pt_BR/template/email/* app/locale/en_US/template/email/
+lib/boleto_php lib/boleto_php
+skin/frontend/base/default/images/boleto skin/frontend/base/default/images/boleto
+skin/frontend/base/default/images/cards skin/frontend/base/default/images/cards
