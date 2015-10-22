@@ -7,15 +7,6 @@
  */
 class Ceicom_Boleto_Controller_Router extends Mage_Core_Controller_Varien_Router_Abstract
 {
-    public function initControllerRouters($observer)
-    {
-        //$front = $observer->getEvent()->getFront();
-        //$boleto = new Ceicom_Boleto_Controller_Router();
-        //$front->addRouter('boleto',$boleto);
-//        echo("<pre>");
-//        die(print_r(Mage::app()->getFrontController()));
-    }
-
     /**
      * @param Zend_Controller_Request_Http $request
      * @internal param \Ceicom_Boleto_Helper_Data $helper

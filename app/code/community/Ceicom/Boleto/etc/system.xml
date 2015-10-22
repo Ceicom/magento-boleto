@@ -12,24 +12,12 @@
                     <show_in_store>1</show_in_store>
                     <comment>
                         <![CDATA[
-					 	<p>Version: <p>
-                        <p><a href="https://github.com/Ceicom/magento-boleto" target="_blank">Repositorio oficial</a></p>
-                        <p><a href="https://github.com/Ceicom/magento-boleto#colaboradores" target="_blank">Colaboradores</a></p>
-                        <hr>
-                        ]]>
-                    </comment>
-
-                    <comment>
-                        <![CDATA[
                         <div>
-                            Versão: 1.0.0 <br><br>
-                            <p><a style="color:blue;" href="https://github.com/Ceicom/magento-boleto" target="_blank">Repositorio oficial</a></p>
-                            <p><a style="color:blue;" href="https://github.com/Ceicom/magento-boleto#colaboradores" target="_blank">Colaboradores</a></p>
-                            <br><br><hr/>
+                            <p><strong>Módulo baseado no projeto <a href="http://www.boleto.magentobr.com/" target="_blank" title="Boleto Bancário MagentoBR" target="_blank">Boleto Bancário MagentoBR</a></strong></p>
+                            <hr/>
                         </div>
                         ]]>
-                    </comment>
-                    
+                    </comment>                    
                     <fields>
                         <active translate="label">
                             <label>Enabled</label>

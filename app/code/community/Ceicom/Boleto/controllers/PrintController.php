@@ -67,7 +67,7 @@ class Ceicom_Boleto_PrintController extends Mage_Core_Controller_Front_Action
                     ->append(
                         $this->getLayout()
                             ->createBlock('boleto/frontend_checkout_success')
-                            ->setTemplate('ceicom/boleto/print/order-canceled.phtml')
+                            ->setTemplate('ceicom/boleto/print/order_canceled.phtml')
                     );
                 $this->renderLayout();
             }
