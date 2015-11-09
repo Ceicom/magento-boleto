@@ -14,16 +14,16 @@
 
 // +----------------------------------------------------------------------+
 // | Originado do Projeto BBBoletoFree que tiveram colaborações de Daniel |
-// | William Schultz e Leandro Maniezo que por sua vez foi derivado do	  |
-// | PHPBoleto de João Prado Maia e Pablo Martins F. Costa				        |
-// | 																	                                    |
+// | William Schultz e Leandro Maniezo que por sua vez foi derivado do    |
+// | PHPBoleto de João Prado Maia e Pablo Martins F. Costa                |
+// |                                                                      |
 // | Se vc quer colaborar, nos ajude a desenvolver p/ os demais bancos :-)|
 // | Acesse o site do Projeto BoletoPhp: www.boletophp.com.br             |
 // +----------------------------------------------------------------------+
 
 // +----------------------------------------------------------------------+
 // | Equipe Coordenação Projeto BoletoPhp: <boletophp@boletophp.com.br>   |
-// | Desenvolvimento Boleto Santander-Banespa : Fabio R. Lenharo		      |
+// | Desenvolvimento Boleto Santander-Banespa : Fabio R. Lenharo          |
 // +----------------------------------------------------------------------+
 ?>
 
@@ -46,8 +46,8 @@
 <script language="Javascript1.2">
   <!--
   function printpage() {
-	alert("ATENÇÃO: Não imprima este boleto em modo econômico.");
-	window.print();
+  alert("ATENÇÃO: Não imprima este boleto em modo econômico.");
+  window.print();
   }
   //-->
 </script>
@@ -75,13 +75,13 @@ de Impressão</DIV></TD></TR><TR><TD valign=top class=cp><DIV ALIGN="left">
 &nbsp;&nbsp;&nbsp;&nbsp;Valor: &nbsp;&nbsp;R$ <?php echo $dadosboleto["valor_boleto"]?><br>
 </span>
 </DIV></td></tr></table><br><table cellspacing=0 cellpadding=0 width=666 border=0><TBODY><TR><TD class=ct width=666><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/6.png width=665 border=0></TD></TR><TR><TD class=ct width=666><div align=right><b class=cp>Recibo
-do Sacado</b></div></TD></tr></tbody></table><table width=666 cellspacing=5 cellpadding=0 border=0><tr><td width=41></TD></tr></table>
+do Pagador</b></div></TD></tr></tbody></table><table width=666 cellspacing=5 cellpadding=0 border=0><tr><td width=41></TD></tr></table>
 <table width=666 cellspacing=5 cellpadding=0 border=0 align=Default>
   <tr>
     <td width=41><IMG SRC="<?php echo $dadosboleto["logo_url"] ?>"></td>
     <td class=ti width=455 style="font-size:13px;"><?php echo $dadosboleto["identificacao"]; ?> <?php echo isset($dadosboleto["cpf_cnpj"]) ? "<br>".$dadosboleto["cpf_cnpj"] : '' ?><br>
-	<?php echo $dadosboleto["endereco"]; ?><br>
-	<?php echo $dadosboleto["cidade_uf"]; ?><br>
+  <?php echo $dadosboleto["endereco"]; ?><br>
+  <?php echo $dadosboleto["cidade_uf"]; ?><br>
     </td>
     <td align=RIGHT width=150 class=ti>&nbsp;</td>
   </tr>
@@ -94,8 +94,8 @@ do Sacado</b></div></TD></tr></tbody></table><table width=666 cellspacing=5 cell
 <span class="campotitulo">
 <?php echo $dadosboleto["linha_digitavel"]?>
 </span></span></td>
-</tr><tbody><tr><td colspan=5><img height=2 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=298 height=13>Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=126 height=13>Agência/Código
-do Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=34 height=13>Espécie</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>Quantidade</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=120 height=13>Nosso
+</tr><tbody><tr><td colspan=5><img height=2 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=298 height=13>Beneficiário</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=126 height=13>Agência/Código
+do Beneficiário</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=34 height=13>Espécie</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>Quantidade</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=120 height=13>Nosso
 número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top width=298 height=12>
   <span class="campo"><?php echo $dadosboleto["cedente"]; ?></span></td>
 <td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top width=126 height=12>
@@ -143,7 +143,7 @@ Desconto / Abatimentos</td><td class=ct valign=top width=7 height=13><img height
 Outras deduções</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=113 height=13>(+)
 Mora / Multa</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=113 height=13>(+)
 Outros acréscimos</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(=)
-Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=112 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr><tr><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=112 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=112 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=659 height=13>Sacado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12>
+Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=112 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr><tr><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=112 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=112 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=659 height=13>Pagador</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12>
   <span class="campo">
   <?php echo $dadosboleto["sacado"]?>
   </span></td>
@@ -171,10 +171,10 @@ em qualquer Banco até o vencimento</td><td class=cp valign=top width=7 height=12
   <span class="campo">
   <?php echo $dadosboleto["data_vencimento"]?>
   </span></td>
-</tr><tr><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=472 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=472 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=472 height=13>Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>Ponto Venda / Ident.
-cedente</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top width=472 height=12>
+</tr><tr><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=472 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=472 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=472 height=13>Beneficiário</td><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>Agencia/Código de
+Beneficiário</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top width=472 height=12>
   <span class="campo">
-  <?php echo $dadosboleto["cedente"]?>
+  <?php echo $dadosboleto["cedente"].' - CPF/CPNJ: '.$dadosboleto["cpf_cnpj"].' - '.$dadosboleto["endereco"].' - '.$dadosboleto["cidade_uf"] ?>
   </span></td>
 <td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12>
   <span class="campo">
@@ -252,7 +252,7 @@ Valor documento</td></tr><tr> <td class=cp valign=top width=7 height=12><img hei
 <tr> <td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td></tr><tr>
 <td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td></tr><tr>
 <td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=1 border=0></td></tr></tbody></table></td><td valign=top width=468 rowspan=5><font class=ct>Instruções
-(Texto de responsabilidade do cedente)</font><br><br><span class=cp> <FONT class=campo>
+(Texto de responsabilidade do Beneficiário)</font><br><br><span class=cp> <FONT class=campo>
 <?php echo $dadosboleto["instrucoes1"]; ?><br>
 <?php echo $dadosboleto["instrucoes2"]; ?><br>
 <?php echo $dadosboleto["instrucoes3"]; ?><br>
@@ -274,7 +274,7 @@ Mora / Multa</td></tr><tr><td class=cp valign=top width=7 height=12><img height=
 <table cellspacing=0 cellpadding=0 border=0><tbody><tr> <td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(+)
 Outros acréscimos</td></tr><tr> <td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr><tr><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=180 border=0></td></tr></tbody></table></td></tr><tr><td align=right width=10><table cellspacing=0 cellpadding=0 border=0 align=left><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td></tr></tbody></table></td><td align=right width=188><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(=)
 Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr></tbody>
-</table></td></tr></tbody></table><table cellspacing=0 cellpadding=0 width=666 border=0><tbody><tr><td valign=top width=666 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=659 height=13>Sacado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12><span class="campo">
+</table></td></tr></tbody></table><table cellspacing=0 cellpadding=0 width=666 border=0><tbody><tr><td valign=top width=666 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=659 height=13>Pagador</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12><span class="campo">
 <?php echo $dadosboleto["sacado"]?>
 </span>
 </td>
@@ -287,7 +287,7 @@ Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height
   <?php echo $dadosboleto["endereco2"]?>
   </span></td>
 <td class=ct valign=top width=7 height=13><img height=13 src=<?php echo $home_url; ?>lib/boleto_php/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>Cód.
-baixa</td></tr><tr><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=472 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=472 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=180 border=0></td></tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 border=0 width=666><TBODY><TR><TD class=ct  width=7 height=12></TD><TD class=ct  width=409 >Sacador/Avalista</TD><TD class=ct  width=250 ><div align=right>Autenticação
+baixa</td></tr><tr><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=472 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=472 border=0></td><td valign=top width=7 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=<?php echo $home_url; ?>lib/boleto_php/imagens/2.png width=180 border=0></td></tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 border=0 width=666><TBODY><TR><TD class=ct  width=7 height=12></TD><TD class=ct  width=409 >Pagadorr/Avalista</TD><TD class=ct  width=250 ><div align=right>Autenticação
 mecânica - <b class=cp>Ficha de Compensação</b></div></TD></TR><TR><TD class=ct  colspan=3 ></TD></tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 width=666 border=0><TBODY><TR><TD vAlign=bottom align=left height=50><?php fbarcode($dadosboleto["codigo_barras"]); ?>
  </TD>
 </tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 width=666 border=0><TR><TD class=ct width=666></TD></TR><TBODY><TR><TD class=ct width=666><div align=right>Corte
